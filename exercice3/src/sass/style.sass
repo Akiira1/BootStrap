@@ -1,0 +1,179 @@
+@import "./_variables"
+@import "./_icone"
+@import "./_fonts"
+@import "./_bootstrap"
+
+.image-bg
+    background-image: url("../../public/img/hero-bg.jpg")
+    background-position: center
+    background-size: cover
+    background-repeat: none
+    background-color: #4b4949
+    background-blend-mode: multiply
+
+.testi2, .testi3
+    ul
+        li
+            list-style: none
+
+
+// testimonials
+
+.testi1
+    grid-area: testi1
+    img
+        width: 100%
+.testi2
+    grid-area: testi2
+.testi3
+    grid-area: testi3
+.testi4
+    grid-area: testi4
+    i
+        font-size: 40px
+        padding: 3px 10px 0px
+.testi5
+    grid-area: testi5
+    i
+        font-size: 40px
+        padding: 3px 10px 0px
+.testi6
+    grid-area: testi6
+    i
+        
+
+.testimonial-grid
+    display: grid
+    // grid-template-columns: 33% 33% 33%
+    grid-template-areas: "testi1 testi2 testi3" "testi1 testi4 testi5" "testi1 testi6 testi6"
+
+
+@media only screen and (max-width: 576px)
+    .testimonial-grid
+        // grid-template-columns: 50% 50%
+        grid-template-areas:"testi1 testi2" "testi1 testi3" "testi4 testi5" "testi6 testi6"
+        
+        .testi2, .testi3
+            ul
+                margin-left: 0
+        .testi4
+            i
+                font-size: 20px
+                padding: 3px 10px 0px
+        .testi5
+            i
+                font-size: 20px
+                padding: 3px 10px 0px
+
+
+
+.services-main
+
+    .services
+        .container
+            margin: auto
+            margin-top: 2vw
+            margin-bottom: 5vw
+        .row
+            background-color: #fafafaa8
+            border-radius: 50px
+            padding: 10px 10px
+            .col-md-3
+                div
+                    margin: 10px
+                    padding: 10px
+                    background-color: white
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    div
+                        width: 50px
+                        height: 50px
+                        border-radius: 50px
+                        background-color: lightyellow
+                        
+                        i
+                            font-size: 30px
+
+
+
+
+.contact-me-1
+    grid-area: contact1
+.contact-me-2
+    grid-area: contact2
+.contact-me-3
+    grid-area: contact3
+.contact-me-4
+    grid-area: contact4
+
+.contact-me-grid
+    display: grid
+    grid-gap: 20px
+    grid-template-columns: 25% 25% 25% 25%
+    grid-template-areas: "contact1 contact1 contact4 contact4" "contact2 contact3 contact4 contact4" 
+
+@media only screen and (max-width: 576px)
+    .contact-me-grid
+        grid-template-columns: 100%
+        grid-template-areas: "contact1" "contact2" "contact3" "contact4"
+
+
+.contact-me
+    // background-color: #fafafaa8
+    // border-radius: 50px
+    div
+        background-color: white
+        margin: 10px
+        padding: 5px
+    
+
+
+footer
+    margin-top: 100px
+    width: 100%
+    display: flex
+    flex-flow: column
+    justify-content: center
+    align-items: center
+    background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.6)), url('../../public/img/footer-bg.jpg') 
+    background-size: cover
+    background-attachment: fixed
+    background-position: center
+    background-position: center
+    text-align: center
+    color: white
+    box-sizing: border-box
+    padding: 80px 10px
+
+    h2
+        font-weight: bolder
+        font-size: 40px
+
+    .liens
+        gap: 10px
+        margin-bottom: 40px
+
+        a
+            color: white
+            border: none
+            width: 50px
+            height: 50px
+            font-size: 1.2em
+
+    p
+        font-size: .8em
+        color: grey
+
+        span
+            color: white
+            font-weight: 550
+
+        a
+            text-decoration: none
+
+    p:first-of-type
+        font-style: italic
+        margin-top: 20px
+        margin-bottom: 40px
